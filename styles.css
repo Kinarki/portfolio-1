@@ -18,7 +18,8 @@ h1 {
 }
 
 #main_content {
-    min-height: 70vh;
+    height: 70vh;
+    text-align: center;
 }
 
 #footer > ul {
@@ -48,7 +49,7 @@ ul > li {
     display: inline-block;
     padding-left: 10px;
     font-size: 18px;
-    font-family: arial;
+    font-family: arial, sans-serif;
 }
 
 #header > ul > li:hover {
@@ -81,7 +82,7 @@ body {
     background-image: url('images/profilepicture.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
+
 }
 
 .ski {
@@ -105,8 +106,29 @@ body {
 .tab {
     font-size: 3vmin;
     width: 20vw;
-    margin-left: 40vw;
+    display: inline-block;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 
+}
+
+p {
+    color: red;
+    width: 50vw;
+    font-size: 2vh;
+    margin-top: 2em;
+    border-radius: 1em;
+    padding: 1em;
+    margin-left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.pone {
+    margin-top: 25vh;
+}
+
+P:hover {
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 1em;
 }
