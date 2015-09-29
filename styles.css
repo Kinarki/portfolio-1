@@ -1,0 +1,112 @@
+header, footer {
+    min-height: 15vh;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+.container {
+    min-width: 100%;
+    min-height: 90vh;
+}
+
+h1 {
+    margin: 0;
+    padding: 0 2px 2px 2px;
+    background-color: black;
+    color: white;
+}
+
+#main_content {
+    min-height: 70vh;
+}
+
+#footer > ul {
+    padding-top: 30px;
+    color: white;
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    color: white;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul > li {
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 18px;
+    font-family: arial;
+}
+
+#header > ul > li:hover {
+    text-decoration: underline;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.col-xs-12 {
+    padding: 0 !important;
+}
+
+.filler {
+    height: 10vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+
+.filler > ul {
+    padding-top: 3vh;
+}
+
+.abo {
+    background-image: url('images/profilepicture.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.ski {
+    background-image: url('images/philosophy.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.exp {
+    background-image: url('images/yo_videogames.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.con {
+    background-image: url('images/fuckyounebula.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tab {
+    font-size: 3vmin;
+    width: 20vw;
+    margin-left: 40vw;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
