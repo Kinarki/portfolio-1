@@ -50,7 +50,7 @@ ul > li {
     display: inline-block;
     padding-left: 10px;
     font-size: 18px;
-    font-family: arial, sans-serif;
+    font-family: "arial", sans-serif;
 }
 
 #header > ul > li:hover {
@@ -138,8 +138,8 @@ p:hover {
     color: red;
     background-color: rgba(0,0,0,0) !important;
     width: 50vw;
-    padding-top: 35vh;
-    font-size: 3vmin !important;
+    margin-top: 35vh;
+    font-size: 3vh !important;
     border-radius: 1em;
     margin-left: 50%;
     margin-right: -50%;
@@ -151,7 +151,7 @@ p:hover {
     background-color: rgba(0,0,0,0.6);
     border-radius: 1em;
     margin-top: 30vh;
-    font-size: 3vmin !important;
+    font-size: 3vh !important;
     padding: 1em;
 
 }
@@ -167,5 +167,101 @@ p:hover {
     padding-top: 15px;
     padding-bottom: 15px;
     color: red;
+    width: 25vw;
+    margin-left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 
+
+}
+
+.form {
+    margin-top: 25vh;
+    color: red;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.btn {
+    background-image: none !important;
+    background-color: red !important;
+    margin-top: 1em;
+    border-color: white;
+}
+
+.btn:hover {
+    border-color: blue;
+}
+
+.form-control {
+
+    margin: 1em 0;
+}
+
+.left {
+    float: left;
+    width: 35vw;
+    margin-left: 5vmin;
+    height: 25vh;
+    font-size: 3vh !important;
+}
+.left > h2 {
+    font-size: 3vh !important;
+}
+
+.left:hover {
+    background-image: url("images/asteroids.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1em;
+    color: lawngreen;
+}
+
+.lp {
+    color: black;
+    margin-top: 5vh;
+}
+
+.lp:hover {
+    color: lawngreen;
+    background-color: rgba(0,0,0,0);
+}
+
+.left > p {
+    width: 25vw;
+}
+
+.right {
+    float: right;
+    width: 35vw;
+    margin-right: 5vmin;
+    height: 25vh;
+}
+
+.right > h2 {
+    font-size: 3vh !important;
+}
+
+.right:hover {
+    background-image: url("images/missile-command.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1em;
+    background-position: right 1px bottom 1px;
+    color: lawngreen;
+}
+
+.right > p {
+    width: 25vw;
+}
+
+.rp {
+    color: black;
+    margin-top: 5vh;
+}
+
+.rp:hover {
+    color: lawngreen;
+    background-color: rgba(0,0,0,0);
 }
