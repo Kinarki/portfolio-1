@@ -22,11 +22,12 @@ h1 {
     text-align: center;
 }
 
-#footer > ul {
-    padding-top: 30px;
+#footer > ul, li {
     color: white;
     list-style: none;
+    padding-bottom: 10px;
 }
+
 
 a {
     color: white;
@@ -128,7 +129,43 @@ p {
     margin-top: 25vh;
 }
 
-P:hover {
+p:hover {
     background-color: rgba(0,0,0,0.6);
     border-radius: 1em;
+}
+
+.list-group {
+    color: red;
+    background-color: rgba(0,0,0,0) !important;
+    width: 50vw;
+    padding-top: 35vh;
+    font-size: 3vmin !important;
+    border-radius: 1em;
+    margin-left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: none;
+}
+
+.list-group > h2 {
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 1em;
+    margin-top: 30vh;
+    font-size: 3vmin !important;
+    padding: 1em;
+
+}
+
+.list-group-item:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 1em;
+}
+
+.list-group-item {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: red;
+
 }
