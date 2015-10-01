@@ -1,3 +1,9 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
 header, footer {
     min-height: 15vh;
     background-color: black;
@@ -11,12 +17,19 @@ header, footer {
 }
 
 h1 {
-    margin: 0;
+    margin: auto;
     padding: 0 2px 2px 2px;
     background-color: black;
     color: white;
 }
 
+.tab {
+    font-size: 3vmin;
+    width: 20vw;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
 #main_content {
     height: 70vh;
     text-align: center;
@@ -57,11 +70,7 @@ ul > li {
     text-decoration: underline;
 }
 
-body {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
+
 
 .col-xs-12 {
     padding: 0 !important;
@@ -104,14 +113,7 @@ body {
     background-size: cover;
 }
 
-.tab {
-    font-size: 3vmin;
-    width: 20vw;
-    display: inline-block;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
 
-}
 
 p {
     color: red;
