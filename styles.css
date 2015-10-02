@@ -224,6 +224,7 @@ p:hover {
 
 .left > p {
     width: 25vw;
+    margin-top: 10vh;
 }
 
 .right {
@@ -248,6 +249,7 @@ p:hover {
 
 .right > p {
     width: 25vw;
+    margin-top: 10vh;
 }
 
 .rp {
