@@ -99,6 +99,7 @@ ul > li {
     background-image: url('images/yo_videogames.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: 50%;
 }
 
 .con {
@@ -210,6 +211,7 @@ p:hover {
     background-size: cover;
     border-radius: 1em;
     color: lawngreen;
+    background-position-y: 30%;
 }
 
 .lp {
