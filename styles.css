@@ -111,7 +111,6 @@ ul > li {
 
 p {
     color: red;
-    width: 50vw;
     font-size: 2vh;
     margin-top: 2em;
     border-radius: 1em;
@@ -196,10 +195,10 @@ p:hover {
 
 .left {
     float: left;
-    width: 35vw;
-    margin-left: 5vmin;
+    margin-left: 3vmin;
+    margin-top: 5vh;
     height: 25vh;
-    font-size: 3vh !important;
+    font-size: 3vh;
 }
 .left > h2 {
     font-size: 3vh;
@@ -223,15 +222,10 @@ p:hover {
     background-color: rgba(0,0,0,0);
 }
 
-.left > p {
-    width: 25vw;
-    margin-top: 10vh;
-}
-
 .right {
     float: right;
-    width: 35vw;
-    margin-right: 5vmin;
+    margin-top: 5vh;
+    margin-right: 4vmin;
     height: 25vh;
 }
 
@@ -246,11 +240,6 @@ p:hover {
     border-radius: 1em;
     background-position: right 1px bottom 1px;
     color: lawngreen;
-}
-
-.right > p {
-    width: 25vw;
-    margin-top: 10vh;
 }
 
 .rp {
