@@ -83,8 +83,6 @@ ul > li {
     background-image: url('images/profilepicture.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: auto;
 }
 
 .ski {
@@ -263,4 +261,12 @@ p:hover {
 .rp:hover {
     color: lawngreen;
     background-color: rgba(0,0,0,0);
+}
+
+@media screen and (max-width: 375px) {
+    .abo, .ski, .exp {
+        width: 10%;
+        height: 10%;
+        background-position: bottom 50% right 50%;
+    }
 }
