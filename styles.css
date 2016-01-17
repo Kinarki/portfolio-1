@@ -1,263 +1,250 @@
-.main_container {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-header, #footer {
-    min-height: 15vh;
-    background-color: black;
-    text-align: center;
-    color: white;
-}
-
-.container-section {
-    min-width: 100%;
-    min-height: 90vh;
-}
-
-h1 {
-    margin: auto;
-    padding: 0 2px 2px 2px;
-    background-color: black;
-    color: white;
-}
-
-.tab {
-    font-size: 3vmin;
-    width: 20vw;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-
-}
-#main_content {
-    height: 70vh;
+body {
+    width: 100vw;
+    height: 100vh;
+    perspective: 1000px;
+    overflow: hidden;
+    background: url('images/bg-2.jpg') bottom right / 100% 100% no-repeat;
     text-align: center;
 }
-
-#footer > ul, li {
-    color: white;
-    list-style: none;
-    padding-bottom: 10px;
-}
-
-
-a {
-    color: white;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-ul {
-    color: white;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-ul > li {
-    list-style-type: none;
-    display: inline-block;
-    padding-left: 10px;
-    font-size: 18px;
-    font-family: "arial", sans-serif;
-}
-
-.filler {
-    height: 10vh;
-    background-color: black;
-    color: white;
-    text-align: center;
-
-}
-
-.filler > ul {
-    padding-top: 3vh;
-}
-
-.abo {
-    background-image: url('images/profilepicture.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.ski {
-    background-image: url('images/philosophy.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.ski h2 {
-    color: mediumblue;
-}
-
-.exp {
-    background-image: url('images/yo_videogames.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: 50%;
-}
-
-.con {
-    background-image: url('images/fuckyounebula.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-
-p {
-    color: red;
-    font-size: 2vh;
-    margin-top: 2em;
-    border-radius: 1em;
-    padding: 1em;
-    margin-left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
-.pone {
-    margin-top: 25vh;
-}
-
-p:hover {
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 1em;
-}
-
-.list-group {
-    color: red;
-    background-color: rgba(0,0,0,0);
-    width: 50vw;
-    margin-top: 35vh;
-    font-size: 2vmin;
-    border-radius: 1em;
-    margin-left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    box-shadow: none;
-}
-
-.list-group > h2 {
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 1em;
-    margin-top: 30vh;
-    font-size: 3vmin;
-    padding: 1em;
-}
-
-.list-group-item:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 1em;
-}
-
-.list-group-item {
-    background-color: rgba(0,0,0,0);
-    border: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    color: red;
-    width: 35vw;
-    margin: 20px -50% 20px 50%;
-    transform: translate(-50%, -50%);
-
-
-}
-
-.form {
-    margin-top: 25vh;
-    color: red;
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 1em;
-    padding: 1em;
-}
-
-.btn {
-    background-image: none;
-    background-color: red;
-    margin-top: 1em;
-    border-color: white;
-    color: white;
-}
-
-.btn:hover {
-    border-color: blue;
-}
-
-.form-control {
-
-    margin: 1em 0;
-}
-
+/* sliding div - left */
 .left {
+    background-color: #017AD7;
     float: left;
-    margin-left: 3vmin;
-    margin-top: 5vh;
-    height: 25vh;
-    font-size: 3vh;
 }
-.left > h2 {
-    font-size: 3vh;
-}
-
-.left:hover {
-    background-image: url("images/asteroids.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 1em;
-    color: lawngreen;
-    background-position-y: 30%;
-}
-
-.lp {
-    color: black;
-    margin-top: 5vh;
-}
-
-.lp:hover {
-    color: lawngreen;
-    background-color: rgba(0,0,0,0);
-}
-
+/* sliding div - right  */
 .right {
+    background-color: #5491BF;
     float: right;
-    margin-top: 5vh;
-    margin-right: 4vmin;
-    height: 25vh;
+}
+/* sliding divs  */
+.left, .right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    transition: 1s ease-in-out;
 }
 
-.right > h2 {
-    font-size: 3vh;
+.portfolio-pic {
+    position: absolute;
+    z-index: 5;
+    top: 30%;
+    right: 0;
+    margin-right: -10%;
+    transition: 1s ease-in-out;
+}
+.portfolio-name {
+    position: absolute;
+    z-index: 5;
+    width: 200px;
+    right: 0;
+    top: 50%;
+    margin-right: -10%;
+    overflow: visible;
+    transition: 1s ease-in-out;
 }
 
-.right:hover {
-    background-image: url("images/missile-command.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 1em;
-    background-position: right 1px bottom 1px;
-    color: lawngreen;
+.portfolio-name, .enter-button, ._3dface--front>h1, .contacts>h2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    color: white;
 }
 
-.rp {
-    color: black;
-    margin-top: 5vh;
+.enter-button {
+    background: url('images/button-bg.gif') 50% 50% no-repeat;
+    /*background-color: #2E5674;*/
+    width: 15%;
+    min-width: 125px;
+    margin-left: -8%;
+    padding-top: 15px;
+    position: absolute;
+    display: inline-block;
+    top: 80%;
+    left: 0;
+    box-shadow: 2px 2px 2px darkblue;
 }
 
-.rp:hover {
-    color: lawngreen;
-    background-color: rgba(0,0,0,0);
+.btn-span {
+    top: 10px;
+    position: relative;
 }
 
-@media screen and (max-width: 375px) {
-    .abo, .ski, .exp {
-        width: 10%;
-        height: 10%;
-        background-position: bottom 50% right 50%;
-    }
+#exit {
+    background: #2E5674;
+}
+/* keeping the text color consistent */
+.enter-button:hover, .enter-button:focus {
+    color: white;
+}
+/* sliding div animation */
+.enter {
+    width: 10%;
+    min-width: 150px;
+    transition: 1s ease-in-out;
+}
+/* name animation */
+.enter-name {
+    top: 25%;
+    left: 0;
+    transition: 1s ease-in-out;
+}
+/* picture animation */
+.enter-pic {
+    top: 3%;
+    left: 0;
+    transition: 1s ease-in-out;
+}
+
+.front-p {
+    height: 10px;
+}
+
+.horizontal-well {
+    width: 90%;
+    height: 35%;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.vertical-well {
+    width: 45%;
+    height: 75%;
+    margin: 12% 0 0 3%;
+    float: left;
+}
+
+.large-well {
+    width: 90%;
+    height: 90%;
+    margin: 5% 0 0 5%;
+}
+
+.blog-well {
+    background: url('images/blog.png')top left / 100% 100% no-repeat;
+}
+
+.sgt-well {
+    background: url('images/sgt.png') top left / 100% 100% no-repeat;
+}
+
+.calculator-well {
+    background: url('images/calculator.png') top left / 100% 100% no-repeat;
+}
+
+.mboutique-well {
+    background: url('images/mboutique.png') top left / 100% 100% no-repeat;
+}
+
+.matching-well {
+    background: url('images/matching.png') top left / 100% 100% no-repeat;
+}
+
+.tictactoe-well {
+    background: url('images/tictactoe.png') top left / 100% 100% no-repeat;
+}
+
+.tweet-well {
+    background: url('images/tweets.png') top left / 100% 100% no-repeat;
+}
+
+.contacts>ul>li {
+    width: 100px;
+    height: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.separator {
+  margin-top: 25vh;
+}
+
+/* 3D Cube */
+.space3d, ._3dface--front, ._3dface--top,
+._3dface--bottom, ._3dface--left,
+._3dface--right, ._3dface--back, .contacts {
+    width: 400px;
+    height: 400px;
+}
+
+.space3d {
+    perspective: 1000px;
+    text-align: center;
+    display: inline-block;
+}
+
+._3dbox {
+    display: inline-block;
+    transition: all 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateX(-15deg) rotateY(15deg);
+}
+
+._3dface {
+    overflow: hidden;
+    position: absolute;
+    border: 1px solid #888;
+    background: #FFF;
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1), 0 0 50px rgba(0, 0, 0, 0.3);
+    color: white;
+    line-height: 400px;
+    opacity: 0.8;
+}
+
+._3dface--front {
+    transform: translate3d(0, 0, 200px);
+    background: url('images/sides.gif') bottom right / 100% 100% no-repeat;
+}
+
+._3dface--top {
+    transform: rotateX(90deg) translate3d(0, 0, 200px);
+    background: url('images/sides.gif') bottom right / 100% 100% no-repeat;
+}
+
+._3dface--bottom {
+    transform: rotateX(-90deg) translate3d(0, 0, 200px);
+    background: url('images/sides.gif') bottom right / 100% 100% no-repeat;
+}
+
+._3dface--left {
+    left: 50%;
+    margin-left: -200px;
+    transform: rotateY(-90deg) translate3d(0, 0, 200px);
+    background: url('images/sides.gif') bottom right / 100% 100% no-repeat;
+}
+
+._3dface--right {
+    left: 50%;
+    margin-left: -200px;
+    transform: rotateY(90deg) translate3d(0, 0, 200px);
+    background: url('images/sides.gif') bottom right / 100% 100% no-repeat;
+}
+
+._3dface--back {
+    transform: rotateY(180deg) translate3d(0, 0, 200px);
+    background: url('images/sides.gif') bottom right / 100% 100% no-repeat;
+}
+
+#radio-left:checked ~ .space3d ._3dbox {
+    transform: rotateY(90deg);
+}
+
+#radio-right:checked ~ .space3d ._3dbox {
+    transform: rotateY(-90deg);
+}
+
+#radio-bottom:checked ~ .space3d ._3dbox {
+    transform: rotateX(90deg);
+}
+
+#radio-top:checked ~ .space3d ._3dbox {
+    transform: rotateX(-90deg);
+}
+
+#radio-back:checked ~ .space3d ._3dbox {
+    transform: rotateY(180deg);
 }
