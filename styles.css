@@ -51,7 +51,6 @@ body {
 
 .enter-button {
     background: url('images/button-bg.gif') 50% 50% no-repeat;
-    /*background-color: #2E5674;*/
     width: 15%;
     min-width: 125px;
     margin-left: -8%;
@@ -108,7 +107,7 @@ body {
 .vertical-well {
     width: 45%;
     height: 75%;
-    margin: 12% 0 0 3%;
+    margin: 12% 0 5% 3%;
     float: left;
 }
 
@@ -149,6 +148,12 @@ body {
 .contacts>ul>li {
     width: 100px;
     height: 30px;
+    list-style-type: none;
+    float: left;
+}
+
+.contacts>ul>li>a {
+    color: white;
 }
 
 .hidden {
@@ -247,4 +252,97 @@ body {
 
 #radio-back:checked ~ .space3d ._3dbox {
     transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background-image: none;
+        overflow: scroll;
+    }
+    .left {
+        width: 100%;
+        height: 60%;
+    }
+
+    .right {
+        position: fixed;
+        width: 100%;
+        height: 40%;
+        bottom: 0;
+        /*left: 0;*/
+    }
+
+    .portfolio-pic {
+        top: 10%;
+        left: 26%;
+    }
+
+    .portfolio-name {
+        top: 60%;
+        left: 23%;
+    }
+
+    .enter-button {
+        top: 0;
+        left: 41%;
+        margin-top: -5%;
+        background: none #2E5674;
+    }
+
+    .portfolio-pic {
+        width: auto;
+        height: 50%;
+    }
+
+    .enter {
+        height: 10%;
+        transition: 1s ease-in-out;
+    }
+
+    .enter-pic {
+        height: 100%;
+        top: 5%;
+        left: 5%;
+        transition: 0.5s ease-in-out;
+    }
+
+    .enter-name {
+        top: 2%;
+        left: 22%;
+        transition: 1s ease-in-out;
+    }
+
+    .xs-container {
+        width: 100%;
+        height: 80%;
+        overflow: scroll;
+    }
+
+    .clearfix {
+        clear: both;
+    }
+
+    .clearfix>h2 {
+        margin-left: -5%;
+    }
+
+    .clearfix>ul {
+        margin-left: -15%;
+    }
+
+    .clearfix>ul>li {
+        width: 33%;
+        height: 30px;
+        list-style-type: none;
+        float: left;
+    }
+
+    .clearfix>ul>li>a, .clearfix>h2, .main-well, .projects-title {
+        color: #2E5674;
+    }
+
+    .clearfix>h2, .projects-title {
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+    }
 }
