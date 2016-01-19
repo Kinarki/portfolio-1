@@ -93,6 +93,11 @@ body {
     transition: 1s ease-in-out;
 }
 
+/* radio button navigation CSS */
+.radio-buttons {
+    height: 0;
+}
+
 .front-p {
     height: 10px;
 }
