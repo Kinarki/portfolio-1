@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="">
     <head>
         <meta charset="utf-8">
         <meta name="description" content="My experience">
@@ -13,6 +13,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="//code.angularjs.org/1.5.0-rc.1/angular.min.js"></script>
 
         <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="scripts.js"></script>
@@ -22,6 +23,12 @@
         <div class="left">
             <img class="portfolio-pic img-responsive img-circle" src="images/portfolio-pic.jpg" alt="profile picture">
             <h1 class="portfolio-name">Nick Friend</h1>
+            <div class="cube-nav-display hidden-xs">
+                <p data-ng-show="cube == 'projects-1'">Hello</p>
+                <p data-ng-show="cube == 'projects-2'"></p>
+                <p data-ng-show="cube == 'projects-3'"></p>
+                <p data-ng-show="cube == 'projects-4'"></p>
+            </div>
         </div>
         <!--    right sliding div  -->
         <div class="right">
@@ -36,12 +43,12 @@
         </div>
         <div class="hidden-xs">
             <!--  radio buttons to navigate around the cube -->
-            <input type="radio" checked id="radio-front" name="select-face"/>
-            <input type="radio" id="radio-left" name="select-face"/>
-            <input type="radio" id="radio-right" name="select-face"/>
-            <input type="radio" id="radio-top" name="select-face"/>
-            <input type="radio" id="radio-bottom" name="select-face"/>
-            <input type="radio" id="radio-back" name="select-face"/>
+            <input type="radio" checked id="radio-front" name="cube-nav">
+            <input type="radio" id="radio-left" name="cube-nav" value="projects-1" data-ng-model="cube">
+            <input type="radio" id="radio-right" name="cube-nav" data-ng-model="cube" value="projects-2">
+            <input type="radio" id="radio-top" name="cube-nav" data-ng-model="cube" value="projects-3">
+            <input type="radio" id="radio-bottom" name="cube-nav" data-ng-model="cube" value="projects-4">
+            <input type="radio" id="radio-back" name="cube-nav">
             <div class="separator"></div>
             <div class="space3d hidden">
                 <!--  cube -->
