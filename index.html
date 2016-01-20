@@ -24,10 +24,73 @@
             <img class="portfolio-pic img-responsive img-circle" src="images/portfolio-pic.jpg" alt="profile picture">
             <h1 class="portfolio-name">Nick Friend</h1>
             <div class="cube-nav-display hidden-xs">
-                <p data-ng-show="cube == 'projects-1'">Hello</p>
-                <p data-ng-show="cube == 'projects-2'"></p>
-                <p data-ng-show="cube == 'projects-3'"></p>
-                <p data-ng-show="cube == 'projects-4'"></p>
+                <div data-ng-show="cube == 'projects-1'">
+                    <!--  Calculator project  -->
+                    <h3>Calculator</h3>
+                    <p>bacon ipsum</p>
+                    <img src="images/html5-logo.png" alt="html 5 logo" class="thumb-img">
+                    <img src="images/css-logo.png" alt="css 3 logo" class="thumb-img">
+                    <img src="images/js-logo.png" alt="javascript logo" class="thumb-img">
+                    <img src="images/bootstrap-logo.png" alt="bootstrap logo" class="thumb-img">
+                    <!-- CSS design project -->
+                    <h3>Mboutique</h3>
+                    <p>bacon ipsum</p>
+                    <img src="images/html5-logo.png" alt="html 5 logo" class="thumb-img">
+                    <img src="images/css-logo.png" alt="css 3 logo" class="thumb-img">
+                    <img src="images/js-logo.png" alt="javascript logo" class="thumb-img">
+                    <img src="images/bootstrap-logo.png" alt="bootstrap logo" class="thumb-img">
+                    <img src="images/angular-logo.png" alt="angular logo" class="thumb-img">
+                </div>
+                <div data-ng-show="cube == 'projects-2'">
+                    <!-- bootcamp hackathon projects -->
+                    <h2>Hackathon Projects</h2>
+                    <!-- hackathon design and logic challenge(1st place) -->
+                    <h3>Tic-Tac-Toe</h3>
+                    <p>bacon ipsum</p>
+                    <img src="images/html5-logo.png" alt="html 5 logo" class="thumb-img">
+                    <img src="images/css-logo.png" alt="css 3 logo" class="thumb-img">
+                    <img src="images/js-logo.png" alt="javascript logo" class="thumb-img">
+                    <img src="images/bootstrap-logo.png" alt="bootstrap logo" class="thumb-img">
+                    <!-- hackathon api challenge(2nd place)  -->
+                    <h3>API Challenge</h3>
+                    <p>bacon ipsum</p>
+                    <img src="images/html5-logo.png" alt="html 5 logo" class="thumb-img">
+                    <img src="images/css-logo.png" alt="css 3 logo" class="thumb-img">
+                    <img src="images/js-logo.png" alt="javascript logo" class="thumb-img">
+                    <img src="images/bootstrap-logo.png" alt="bootstrap logo" class="thumb-img">
+                </div>
+                <div data-ng-show="cube == 'projects-3'">
+                    <!-- worked with fellow students on projects -->
+                    <h2>Paired Programming</h2>
+                    <!-- front end/backend paired programming challenge -->
+                    <h3>Blog Challenge</h3>
+                    <p>bacon ipsum</p>
+                    <img src="images/html5-logo.png" alt="html 5 logo" class="thumb-img">
+                    <img src="images/css-logo.png" alt="css 3 logo" class="thumb-img">
+                    <img src="images/js-logo.png" alt="javascript logo" class="thumb-img">
+                    <img src="images/bootstrap-logo.png" alt="bootstrap logo" class="thumb-img">
+                    <img src="images/angular-logo.png" alt="angular logo" class="thumb-img">
+                    <!-- first student paired programming for javascript logic later
+                         updated with angular -->
+                    <h3>Student Grade Table</h3>
+                    <p>bacon ipsum</p>
+                    <img src="images/html5-logo.png" alt="html 5 logo" class="thumb-img">
+                    <img src="images/css-logo.png" alt="css 3 logo" class="thumb-img">
+                    <img src="images/js-logo.png" alt="javascript logo" class="thumb-img">
+                    <img src="images/bootstrap-logo.png" alt="bootstrap logo" class="thumb-img">
+                    <img src="images/angular-logo.png" alt="angular logo" class="thumb-img">
+                </div>
+                <div data-ng-show="cube == 'projects-4'">
+                    <!-- memory match game combines css, html and js -->
+                    <h3>Memory Match</h3>
+                    <p>bacon ipsum</p>
+                    <img src="images/html5-logo.png" alt="html 5 logo" class="thumb-img">
+                    <img src="images/css-logo.png" alt="css 3 logo" class="thumb-img">
+                    <img src="images/js-logo.png" alt="javascript logo" class="thumb-img">
+                    <img src="images/bootstrap-logo.png" alt="bootstrap logo" class="thumb-img">
+                </div>
+                <div data-ng-show="cube == 'projects-clear'"></div>
+                <div data-ng-show="cube == 'clear-projects'"></div>
             </div>
         </div>
         <!--    right sliding div  -->
@@ -41,20 +104,20 @@
                 <span class="btn-span">Exit</span>
             </button>
         </div>
-        <div class="hidden-xs">
+        <div class="hidden-xs" ng-init="cube = 'projects-clear'">
             <!--  radio buttons to navigate around the cube -->
-            <input type="radio" checked id="radio-front" name="cube-nav">
-            <input type="radio" id="radio-left" name="cube-nav" value="projects-1" data-ng-model="cube">
+            <input type="radio" id="radio-front" name="cube-nav" checked data-ng-model="cube" value="projects-clear">
+            <input type="radio" id="radio-left" name="cube-nav" data-ng-model="cube" value="projects-1">
             <input type="radio" id="radio-right" name="cube-nav" data-ng-model="cube" value="projects-2">
             <input type="radio" id="radio-top" name="cube-nav" data-ng-model="cube" value="projects-3">
             <input type="radio" id="radio-bottom" name="cube-nav" data-ng-model="cube" value="projects-4">
-            <input type="radio" id="radio-back" name="cube-nav">
+            <input type="radio" id="radio-back" name="cube-nav" data-ng-model="cube" value="clear-projects">
             <div class="separator"></div>
             <div class="space3d hidden">
                 <!--  cube -->
                 <div class="_3dbox">
                     <div class="_3dface _3dface--front">
-                        <h1>Web Designer</h1>
+                        <h1>Web Developer</h1>
                         <p class="front-p">Discovered a passion for web design in 2015. </p>
                         <p class="front-p">Completed a coding bootcamp at LearningFuze.</p>
                     </div>

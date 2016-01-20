@@ -5,7 +5,7 @@ $(document).ready(function(){
         $('.portfolio-name').addClass('enter-name');
         $('.portfolio-pic').addClass('enter-pic');
         setTimeout(function(){
-            $('.space3d').removeClass('hidden');
+            $('.space3d, .cube-nav-display').removeClass('hidden');
         },500);
     });
     //toggle enter and exit buttons
@@ -17,6 +17,6 @@ $(document).ready(function(){
         $('.left, .right').removeClass('enter');
         $('.portfolio-name').removeClass('enter-name');
         $('.portfolio-pic').removeClass('enter-pic');
-        $('.space3d').addClass('hidden');
+        $('.space3d, .cube-nav-display').addClass('hidden');
     });
 });

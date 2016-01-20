@@ -25,25 +25,22 @@ body {
 }
 
 .portfolio-pic {
-    position: absolute;
+    position: relative;
     z-index: 5;
     top: 30%;
-    right: 0;
-    margin-right: -10%;
+    left: 90%;
     transition: 1s ease-in-out;
 }
 .portfolio-name {
-    position: absolute;
+    position: relative;
     z-index: 5;
-    width: 200px;
-    right: 0;
-    top: 50%;
-    margin-right: -10%;
+    left: 49%;
+    top: 35%;
     overflow: visible;
     transition: 1s ease-in-out;
 }
 
-.portfolio-name, .enter-button, ._3dface--front>h1, .contacts>h2 {
+.portfolio-name, .enter-button, ._3dface--front>h1, h2, h3 {
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
     color: white;
@@ -82,9 +79,12 @@ body {
 }
 /* name animation */
 .enter-name {
-    top: 25%;
+    top: 0;
     left: 0;
-    transition: 1s ease-in-out;
+    min-width: 150px;
+    margin-right: 0;
+    font-size: 2em;
+    transition: 0.89s ease-in-out;
 }
 /* picture animation */
 .enter-pic {
@@ -92,7 +92,30 @@ body {
     left: 0;
     transition: 1s ease-in-out;
 }
+/* left side information display */
+.cube-nav-display {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    width: 150px;
+    text-align: center;
+    color: white;
+}
 
+.cube-nav-display>div>h3 {
+    clear: both;
+    padding-top: 5%;
+}
+
+.cube-nav-display>div>p {
+    text-align: justify;
+}
+
+.thumb-img {
+    width: 15%;
+    height: 15%;
+    /*float: left;*/
+}
 /* radio button navigation CSS */
 .radio-buttons {
     height: 0;
