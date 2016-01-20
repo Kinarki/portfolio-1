@@ -9,6 +9,11 @@ $(document).ready(function(){
             $('.space3d, .cube-nav-display').removeClass('hidden');
         },500);
     });
+    //adding noise to radio button click
+    $('.woosh').on('click', function(){
+        $('#woosh-sound').trigger('play');
+        console.log('woosh');
+    });
     //toggle enter and exit buttons
     $(".enter-button").on("click", function(){
         $('.enter-button').toggle();

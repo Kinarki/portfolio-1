@@ -106,12 +106,12 @@
         </div>
         <div class="hidden-xs" ng-init="cube = 'projects-clear'">
             <!--  radio buttons to navigate around the cube -->
-            <input type="radio" id="radio-front" name="cube-nav" checked data-ng-model="cube" value="projects-clear">
-            <input type="radio" id="radio-left" name="cube-nav" data-ng-model="cube" value="projects-1">
-            <input type="radio" id="radio-right" name="cube-nav" data-ng-model="cube" value="projects-2">
-            <input type="radio" id="radio-top" name="cube-nav" data-ng-model="cube" value="projects-3">
-            <input type="radio" id="radio-bottom" name="cube-nav" data-ng-model="cube" value="projects-4">
-            <input type="radio" id="radio-back" name="cube-nav" data-ng-model="cube" value="clear-projects">
+            <input type="radio" id="radio-front" name="cube-nav" checked data-ng-model="cube" value="projects-clear" class="woosh">
+            <input type="radio" id="radio-left" name="cube-nav" data-ng-model="cube" value="projects-1" class="woosh">
+            <input type="radio" id="radio-right" name="cube-nav" data-ng-model="cube" value="projects-2" class="woosh">
+            <input type="radio" id="radio-top" name="cube-nav" data-ng-model="cube" value="projects-3" class="woosh">
+            <input type="radio" id="radio-bottom" name="cube-nav" data-ng-model="cube" value="projects-4" class="woosh">
+            <input type="radio" id="radio-back" name="cube-nav" data-ng-model="cube" value="clear-projects" class="woosh">
             <div class="separator"></div>
             <div class="space3d hidden">
                 <!--  cube -->
@@ -153,33 +153,34 @@
             <div class="separator"></div>
         </div>
 
-    <div class="visible-xs xs-container">
-        <div class="well main-well">
-            <h1>Web Designer</h1>
-            <p class="front-p">Discovered a passion for web design in 2015. </p>
-            <p class="front-p">Completed a coding bootcamp at LearningFuze.</p>
-        </div>
-        <!-- projects -->
-        <h2 class="projects-title">Projects</h2>
-        <div class="well horizontal-well blog-well"></div>
-        <div class="well horizontal-well sgt-well"></div>
-        <div class="well horizontal-well matching-well"></div>
-        <div class="well horizontal-well tictactoe-well"></div>
-        <div class="well horizontal-well tweet-well"></div>
-        <div class="well vertical-well calculator-well"></div>
-        <div class="well vertical-well mboutique-well"></div>
+        <div class="visible-xs xs-container">
+            <div class="well main-well">
+                <h1>Web Designer</h1>
+                <p class="front-p">Discovered a passion for web design in 2015. </p>
+                <p class="front-p">Completed a coding bootcamp at LearningFuze.</p>
+            </div>
+            <!-- projects -->
+            <h2 class="projects-title">Projects</h2>
+            <div class="well horizontal-well blog-well"></div>
+            <div class="well horizontal-well sgt-well"></div>
+            <div class="well horizontal-well matching-well"></div>
+            <div class="well horizontal-well tictactoe-well"></div>
+            <div class="well horizontal-well tweet-well"></div>
+            <div class="well vertical-well calculator-well"></div>
+            <div class="well vertical-well mboutique-well"></div>
 
-        <div class="well clearfix horizontal-well">
-            <h2>Contacts</h2>
-            <ul>
-                <li><i class="fa fa-github"></i><a href="https://github.com/Kinarki" target="_blank"> GitHub</a></li>
-                <li><i class="fa fa-envelope-o"></i><a href="mailto:nickfriend.kinarki@gmail.com"> Email</a></li>
-                <li><i class="fa fa-linkedin-square"></i>
-                    <a href="https://www.linkedin.com/in/nickfriendkinarki" target="_blank"> LinkedIn</a>
-                </li>
-            </ul>
+            <div class="well clearfix horizontal-well">
+                <h2>Contacts</h2>
+                <ul>
+                    <li><i class="fa fa-github"></i><a href="https://github.com/Kinarki" target="_blank"> GitHub</a></li>
+                    <li><i class="fa fa-envelope-o"></i><a href="mailto:nickfriend.kinarki@gmail.com"> Email</a></li>
+                    <li><i class="fa fa-linkedin-square"></i>
+                        <a href="https://www.linkedin.com/in/nickfriendkinarki" target="_blank"> LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
         <audio id="audio" src="audio/door.mp3"></audio>
+        <audio id="woosh-sound" src="audio/woosh.mp3"></audio>
     </body>
 </html>
