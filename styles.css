@@ -348,10 +348,11 @@ body {
 
     .clearfix {
         clear: both;
+        margin-bottom: 0;
     }
 
-    .clearfix>h2 {
-        margin-left: -5%;
+    .clearfix>h2, h1 {
+        margin-top: 0;
     }
 
     .clearfix>ul {
