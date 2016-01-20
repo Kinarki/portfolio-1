@@ -4,6 +4,7 @@ $(document).ready(function(){
         $('.left, .right').addClass('enter');
         $('.portfolio-name').addClass('enter-name');
         $('.portfolio-pic').addClass('enter-pic');
+        $('#audio').trigger('play');
         setTimeout(function(){
             $('.space3d, .cube-nav-display').removeClass('hidden');
         },500);
@@ -18,5 +19,6 @@ $(document).ready(function(){
         $('.portfolio-name').removeClass('enter-name');
         $('.portfolio-pic').removeClass('enter-pic');
         $('.space3d, .cube-nav-display').addClass('hidden');
+        $('#audio').trigger('play');
     });
 });

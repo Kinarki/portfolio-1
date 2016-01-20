@@ -306,8 +306,8 @@ body {
     }
 
     .portfolio-name {
-        top: 60%;
-        left: 23%;
+        top: 13%;
+        left: 0;
     }
 
     .enter-button {
@@ -335,8 +335,7 @@ body {
     }
 
     .enter-name {
-        top: 2%;
-        left: 22%;
+        top: -100%;
         transition: 1s ease-in-out;
     }
 
