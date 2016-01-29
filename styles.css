@@ -146,9 +146,6 @@ body {
     margin: 5% 0 0 5%;
 }
 
-.blog-well {
-    background: url('images/blog.png')top left / 100% 100% no-repeat;
-}
 
 .sgt-well {
     background: url('images/sgt.png') top left / 100% 100% no-repeat;
@@ -168,10 +165,6 @@ body {
 
 .tictactoe-well {
     background: url('images/tictactoe.png') top left / 100% 100% no-repeat;
-}
-
-.tweet-well {
-    background: url('images/tweets.png') top left / 100% 100% no-repeat;
 }
 
 .contacts>ul>li {
