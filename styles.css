@@ -3,7 +3,7 @@ body {
     height: 100vh;
     perspective: 1000px;
     overflow: hidden;
-    background: url('images/bg-10.jpg') bottom 50% right -13% / 92% 111% no-repeat;
+    background: url('images/bg-5.jpg') bottom 50% right -13% / 92% 111% no-repeat;
     text-align: center;
     font-family: "Molengo", sans-serif;
     font-size: 1.7em;
@@ -57,7 +57,7 @@ body {
     padding-top: 15px;
     position: absolute;
     display: inline-block;
-    top: 80%;
+    top: 90%;
     left: 92%;
     box-shadow: 2px 2px 2px darkblue;
     /*transition: 1s ease-in-out;*/
@@ -115,9 +115,8 @@ body {
 }
 /* left side information display */
 .cube-nav-display {
-    position: absolute;
+    position: relative;
     left: 0;
-    top: 30%;
     width: 100%;
     min-width: 150px;
     text-align: center;
@@ -408,4 +407,10 @@ body {
         transition: 1s ease-in-out;
     }
 }
+
+@media screen and (max-width: 992px) {
+
+}
+
+
 
