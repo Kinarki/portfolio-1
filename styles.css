@@ -3,8 +3,9 @@ body {
     height: 100vh;
     perspective: 1000px;
     overflow: hidden;
-    background: url('images/bg-2.jpg') bottom right / 100% 100% no-repeat;
+    background: url('images/bg-1.jpg') bottom right / 100% 100% no-repeat;
     text-align: center;
+    font-family: "Molengo", sans-serif;
 }
 /* sliding div - left */
 .left {
@@ -41,7 +42,7 @@ body {
 }
 
 .portfolio-name, .enter-button, ._3dface--front>h1, h2, h3 {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     color: white;
 }
@@ -186,6 +187,14 @@ body {
   margin-top: 25vh;
 }
 
+.bg-div {
+    width: 400px;
+    height: 400px;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 /* 3D Cube */
 .space3d, ._3dface--front, ._3dface--top,
 ._3dface--bottom, ._3dface--left,
@@ -224,36 +233,31 @@ body {
 
 ._3dface--front {
     transform: translate3d(0, 0, 200px);
-    background: url('images/sides.gif') bottom right / 100% 100% no-repeat;
 }
 
 ._3dface--top {
     transform: rotateX(90deg) translate3d(0, 0, 200px);
-    background: url('images/sides.gif') bottom right / 100% 100% no-repeat;
 }
 
 ._3dface--bottom {
     transform: rotateX(-90deg) translate3d(0, 0, 200px);
-    background: url('images/sides.gif') bottom right / 100% 100% no-repeat;
 }
 
 ._3dface--left {
     left: 50%;
     margin-left: -200px;
     transform: rotateY(-90deg) translate3d(0, 0, 200px);
-    background: url('images/sides.gif') bottom right / 100% 100% no-repeat;
+
 }
 
 ._3dface--right {
     left: 50%;
     margin-left: -200px;
     transform: rotateY(90deg) translate3d(0, 0, 200px);
-    background: url('images/sides.gif') bottom right / 100% 100% no-repeat;
 }
 
 ._3dface--back {
     transform: rotateY(180deg) translate3d(0, 0, 200px);
-    background: url('images/sides.gif') bottom right / 100% 100% no-repeat;
 }
 
 #radio-left:checked ~ .space3d ._3dbox {
@@ -364,7 +368,7 @@ body {
     }
 
     .clearfix>h2, .projects-title {
-        font-family: 'Dancing Script', cursive;
+        font-family: 'Orbitron', sans-serif;
         font-weight: bold;
     }
 }
