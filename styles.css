@@ -3,7 +3,7 @@ body {
     height: 100vh;
     perspective: 500px;
     overflow: hidden;
-    background: url('images/bg-10.jpg') bottom right / 100% 100% no-repeat;
+    background: url('images/bg-10.jpg') bottom 50% right -13% / 92% 111% no-repeat;
     text-align: center;
     font-family: "Molengo", sans-serif;
     font-size: 1.7em;
@@ -51,14 +51,21 @@ body {
 .enter-button {
     background: url('images/button-bg.gif') 50% 50% no-repeat;
     width: 15%;
+    z-index: 4;
     min-width: 125px;
-    margin-left: -8%;
+    /*margin-left: -8%;*/
     padding-top: 15px;
-    position: absolute;
+    position: relative;
     display: inline-block;
-    top: 80%;
-    left: 0;
+    margin-top: 55vh;
+    /*top: 80%;*/
+    left: 50%;
     box-shadow: 2px 2px 2px darkblue;
+    transition: 1s ease-in-out;
+}
+
+.button-enter {
+    left: 50%;
 }
 
 .btn-span {
@@ -74,10 +81,14 @@ body {
     color: white;
 }
 /* sliding div animation */
-.enter {
+.enter-left {
     width: 10%;
     min-width: 150px;
     transition: 1s ease-in-out;
+}
+
+.enter-right {
+    width: 0;
 }
 /* name animation */
 .enter-name {
