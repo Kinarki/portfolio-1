@@ -1,7 +1,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    perspective: 500px;
+    perspective: 1000px;
     overflow: hidden;
     background: url('images/bg-10.jpg') bottom 50% right -13% / 92% 111% no-repeat;
     text-align: center;
@@ -208,6 +208,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    border: 1px solid #74E8D8;
+    box-sizing: border-box;
 }
 /* 3D Cube */
 .space3d, ._3dface--front, ._3dface--top,
