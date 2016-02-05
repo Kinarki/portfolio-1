@@ -3,7 +3,7 @@ body {
     height: 100vh;
     perspective: 1000px;
     overflow: hidden;
-    background: url('images/bg-1.jpg') bottom right / 100% 100% no-repeat;
+    background: url('images/bg-7.jpg') bottom right / 100% 100% no-repeat;
     text-align: center;
     font-family: "Molengo", sans-serif;
 }
@@ -97,7 +97,7 @@ body {
 .cube-nav-display {
     position: absolute;
     left: 0;
-    top: 25%;
+    top: 30%;
     width: 100%;
     min-width: 150px;
     text-align: center;
@@ -112,6 +112,7 @@ body {
 
 .cube-nav-display>div>p {
     text-align: left;
+    padding: 5px;
 }
 
 .thumb-img {
