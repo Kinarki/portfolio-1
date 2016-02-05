@@ -3,7 +3,7 @@ body {
     height: 100vh;
     perspective: 1000px;
     overflow: hidden;
-    background: url('images/bg-5.jpg') bottom 50% right -13% / 92% 111% no-repeat;
+    background: url('images/bg-1.jpg') bottom 50% right -13% / 92% 111% no-repeat;
     text-align: center;
     font-family: "Molengo", sans-serif;
     font-size: 1.7em;

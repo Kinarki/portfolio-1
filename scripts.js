@@ -9,7 +9,7 @@ $(document).ready(function(){
         $('#audio').trigger('play');
         setTimeout(function(){
             $('.space3d, .cube-nav-display').removeClass('hidden');
-        },900);
+        },1000);
     });
     //adding noise to radio button click
     $('.woosh').on('click', function(){
