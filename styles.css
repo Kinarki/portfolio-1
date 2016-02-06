@@ -3,7 +3,7 @@ body {
     height: 100vh;
     perspective: 1000px;
     overflow: hidden;
-    background: url('images/bg-1.jpg') bottom 50% right -13% / 92% 111% no-repeat;
+    background: url('images/bg-10.jpg') bottom 50% right -13% / 92% 111% no-repeat;
     text-align: center;
     font-family: "Molengo", sans-serif;
     font-size: 1.7em;
@@ -32,6 +32,7 @@ body {
     top: 30%;
     left: 88%;
     transition: 1s ease-in-out;
+    box-shadow: -2px 2px 2px darkblue;
 }
 .portfolio-name {
     position: relative;
@@ -40,6 +41,7 @@ body {
     top: 35%;
     overflow: visible;
     transition: 1s ease-in-out;
+    text-shadow: -2px 2px 2px darkblue;
 }
 
 .portfolio-name, .enter-button, ._3dface--front>h1, h2, h3 {
@@ -59,7 +61,7 @@ body {
     display: inline-block;
     top: 90%;
     left: 92%;
-    box-shadow: 2px 2px 2px darkblue;
+    box-shadow: -2px 2px 2px darkblue;
     /*transition: 1s ease-in-out;*/
 }
 /* button animation */
@@ -83,6 +85,10 @@ body {
 
 #exit {
     background: #2E5674;
+}
+
+.glyphicon-log-out {
+    padding-left: 10px;
 }
 /* keeping the text color consistent */
 .enter-button:hover, .enter-button:focus {
@@ -408,8 +414,22 @@ body {
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-height: 740px) {
+    .enter-button {
+        left: 90%;
+        transition: 0.5s;
+    }
+}
 
+@media screen and (max-width: 992px), screen and (max-height: 680px) {
+    .cube-nav-display {
+        display: none;
+    }
+
+    .enter-button {
+        left: 25%;
+        transition: 0.5s ease-in-out;
+    }
 }
 
 
