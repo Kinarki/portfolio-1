@@ -55,14 +55,12 @@ body {
     width: 15%;
     z-index: 4;
     min-width: 125px;
-    /*margin-left: -8%;*/
     padding-top: 15px;
     position: absolute;
     display: inline-block;
     top: 90%;
     left: 92%;
     box-shadow: -2px 2px 2px darkblue;
-    /*transition: 1s ease-in-out;*/
 }
 /* button animation */
 .button-enter {
@@ -72,9 +70,9 @@ body {
 
 @keyframes button-animation {
     0% {left: 92%;}
-    25% {left: 80%;}
-    50% {left: 70%;}
-    75% {left: 60%;}
+    25% {left: 85%;}
+    50% {left: 75%;}
+    75% {left: 65%;}
     100% {left: 50%;}
 }
 
@@ -88,7 +86,7 @@ body {
 }
 
 .glyphicon-log-out {
-    padding-left: 10px;
+    padding-left: 15px;
 }
 /* keeping the text color consistent */
 .enter-button:hover, .enter-button:focus {
