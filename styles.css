@@ -12,17 +12,25 @@ body {
 .left {
     background-color: #017AD7;
     float: left;
+    z-index: 3;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 /* sliding div - right  */
 .right {
     background-color: #5491BF;
     float: right;
+    z-index: 2;
+    position: relative;
+    right: 0;
+    bottom: 0;
 }
 /* sliding divs  */
 .left, .right {
     width: 50%;
     height: 100%;
-    position: relative;
+    /*position: absolute;*/
     transition: 1s ease-in-out;
 }
 
@@ -34,6 +42,7 @@ body {
     transition: 1s ease-in-out;
     box-shadow: -2px 2px 2px darkblue;
 }
+
 .portfolio-name {
     position: relative;
     z-index: 5;
@@ -117,6 +126,20 @@ body {
     left: 0;
     transition: 1s ease-in-out;
 }
+
+input[type='radio'] {
+    position: relative;
+    float: right;
+    margin: 8px;
+    z-index: 1;
+    right: 75%;
+ }
+
+.span{
+    display: inline-block;
+    color: white;
+}
+
 /* left side information display */
 .cube-nav-display {
     position: relative;
@@ -144,9 +167,9 @@ body {
     height: 17%;
 }
 /* radio button navigation CSS */
-.radio-buttons {
-    height: 0;
-}
+/*.radio-buttons {*/
+    /*height: 0;*/
+/*}*/
 
 .front-p {
     height: 10px;
@@ -234,6 +257,7 @@ body {
     perspective: 1000px;
     text-align: center;
     display: inline-block;
+    margin-top: -8%;
 }
 
 ._3dbox {
@@ -289,6 +313,10 @@ body {
 
 #radio-left:checked ~ .space3d ._3dbox {
     transform: rotateY(90deg);
+}
+
+#radio-left:checked ~ .span {
+    display: inline-block;
 }
 
 #radio-right:checked ~ .space3d ._3dbox {
@@ -411,6 +439,45 @@ body {
         transition: 1s ease-in-out;
     }
 }
+
+/*@media screen and (min-width: 768px) {*/
+    /*/!* sliding div - left *!/*/
+    /*.left {*/
+        /*background-color: #017AD7;*/
+        /*float: left;*/
+        /*z-index: 3;*/
+        /*position: relative;*/
+        /*top: 0;*/
+        /*left: 0;*/
+    /*}*/
+    /*/!* sliding div - right  *!/*/
+    /*.right {*/
+        /*background-color: #5491BF;*/
+        /*float: right;*/
+        /*z-index: 2;*/
+        /*position: relative;*/
+        /*right: 0;*/
+        /*bottom: 0;*/
+    /*}*/
+    /*/!* sliding divs  *!/*/
+    /*.left, .right {*/
+        /*width: 50%;*/
+        /*height: 100%;*/
+        /*/!*position: absolute;*!/*/
+        /*transition: 1s ease-in-out;*/
+    /*}*/
+
+    /*/!* sliding div animation *!/*/
+    /*.enter-left {*/
+        /*width: 10%;*/
+        /*min-width: 150px;*/
+        /*transition: 1s ease-in-out;*/
+    /*}*/
+
+    /*.enter-right {*/
+        /*width: 0;*/
+    /*}*/
+/*}*/
 
 @media screen and (max-height: 740px) {
     .enter-button {

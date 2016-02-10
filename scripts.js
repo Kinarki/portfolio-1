@@ -9,6 +9,7 @@ $(document).ready(function(){
         $('#audio').trigger('play');
         setTimeout(function(){
             $('.space3d, .cube-nav-display').removeClass('hidden');
+            //$('input').removeClass('hidden');
         },1000);
     });
     //adding noise to radio button click
@@ -28,6 +29,7 @@ $(document).ready(function(){
         $('.portfolio-name').removeClass('enter-name');
         $('.portfolio-pic').removeClass('enter-pic');
         $('.space3d, .cube-nav-display').addClass('hidden');
+        //$('input').addClass('hidden');
         $('#audio').trigger('play');
     });
 });
