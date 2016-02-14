@@ -335,7 +335,9 @@ input[type='radio'] {
     transform: rotateY(180deg);
 }
 
-@media screen and (max-width: 375px) {
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px) {
     body {
         background: url('images/keyhole-nebula.jpg')fixed;
         background-position-x: 10%;
@@ -364,8 +366,8 @@ input[type='radio'] {
     }
 
     .enter-button {
-        top: 0;
-        left: 41%;
+        top: 95%;
+        left: 35%;
         margin-top: -5%;
         background: none #2E5674;
     }
@@ -375,9 +377,32 @@ input[type='radio'] {
         height: 50%;
     }
 
-    .enter {
-        height: 10%;
+    .enter-left {
+        height: 15%;
         transition: 1s ease-in-out;
+    }
+
+    .enter-right {
+        height: 0;
+        transition: 1s ease-in-out;
+    }
+
+    .button-enter {
+        animation: button-animation 1s;
+        top: 75%;
+        left: 58%;    }
+
+    @keyframes button-animation {
+        0% {left: 50%;,
+            top: 95%;}
+        25% {left: 52%;,
+            top: 90%;}
+        50% {left: 54%;,
+            top: 85%;}
+        75% {left: 56%;,
+            top: 80%;}
+        100% {left: 58%;,
+            top: 75%;}
     }
 
     .enter-pic {
@@ -389,6 +414,7 @@ input[type='radio'] {
 
     .enter-name {
         top: -100%;
+        left: 10%;
         transition: 1s ease-in-out;
     }
 
@@ -400,7 +426,11 @@ input[type='radio'] {
 
     .clearfix {
         clear: both;
-        margin-bottom: 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        margin-bottom: -25%;
     }
 
     .clearfix>h2, h1 {
@@ -479,14 +509,19 @@ input[type='radio'] {
     /*}*/
 /*}*/
 
-@media screen and (max-height: 740px) {
+@media screen
+and (max-height: 740px)
+and (min-width: 376px) {
     .enter-button {
         left: 90%;
         transition: 0.5s;
     }
 }
 
-@media screen and (max-width: 992px), screen and (max-height: 680px) {
+@media screen
+and (max-width: 992px)
+and (min-width: 741px)
+and (max-height: 680px) {
     .cube-nav-display {
         display: none;
     }
