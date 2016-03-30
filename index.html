@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="">
     <head>
         <meta charset="utf-8">
         <meta name="description" content="My experience">
@@ -9,10 +9,11 @@
 
         <title>Nick Friend - Portfolio</title>
 
-        <link href='https://fonts.googleapis.com/css?family=Dancing+Script|Roboto' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Dancing+Script|Roboto|Orbitron|Molengo' rel='stylesheet' type='text/css'>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="//code.angularjs.org/1.5.0-rc.1/angular.min.js"></script>
 
         <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="scripts.js"></script>
@@ -22,49 +23,142 @@
         <div class="left">
             <img class="portfolio-pic img-responsive img-circle" src="images/portfolio-pic.jpg" alt="profile picture">
             <h1 class="portfolio-name">Nick Friend</h1>
-        </div>
-        <!--    right sliding div  -->
-        <div class="right">
+            <!-- project display div  -->
+            <div class="cube-nav-display hidden-xs hidden-sm">
+                <div data-ng-show="cube == 'projects-1'">
+                    <!--  Calculator project  -->
+                    <h3>Calculator</h3>
+                    <p>
+                        This project showcases CSS design and JavaScript logic.
+                    </p>
+                    <img src="images/html5-logo.png" alt="html 5 logo" class="thumb-img">
+                    <img src="images/css-logo.png" alt="css 3 logo" class="thumb-img">
+                    <img src="images/js-logo.png" alt="javascript logo" class="thumb-img">
+                    <img src="images/bootstrap-logo.png" alt="bootstrap logo" class="thumb-img">
+                    <!-- CSS design project -->
+                    <h3>Mboutique</h3>
+                    <p>
+                        This project showcases CSS and Angular.
+                    </p>
+                    <img src="images/html5-logo.png" alt="html 5 logo" class="thumb-img">
+                    <img src="images/css-logo.png" alt="css 3 logo" class="thumb-img">
+                    <img src="images/js-logo.png" alt="javascript logo" class="thumb-img">
+                    <img src="images/bootstrap-logo.png" alt="bootstrap logo" class="thumb-img">
+                    <img src="images/angular-logo.png" alt="angular logo" class="thumb-img">
+                </div>
+                <div data-ng-show="cube == 'projects-2'">
+                    <!-- bootcamp hackathon projects -->
+                    <!--<h2>Hackathon Projects</h2>-->
+                    <!-- hackathon design and logic challenge(1st place) -->
+                    <h3>Tic-Tac-Toe</h3>
+                    <p>
+                        First place hackathon award for this project with a group of four.  Contributing factors were
+                        concept and design.
+                    </p>
+                    <img src="images/html5-logo.png" alt="html 5 logo" class="thumb-img">
+                    <img src="images/css-logo.png" alt="css 3 logo" class="thumb-img">
+                    <img src="images/js-logo.png" alt="javascript logo" class="thumb-img">
+                    <img src="images/bootstrap-logo.png" alt="bootstrap logo" class="thumb-img">
+                </div>
+                <div data-ng-show="cube == 'projects-3'">
+                    <!-- first student paired programming for javascript logic later
+                         updated with angular -->
+                    <h3>Student Grade Table</h3>
+                    <p>
+                        This project showcases api calls, JavaScript, Bootstrap and Angular.
+                    </p>
+                    <img src="images/html5-logo.png" alt="html 5 logo" class="thumb-img">
+                    <img src="images/css-logo.png" alt="css 3 logo" class="thumb-img">
+                    <img src="images/js-logo.png" alt="javascript logo" class="thumb-img">
+                    <img src="images/bootstrap-logo.png" alt="bootstrap logo" class="thumb-img">
+                    <img src="images/angular-logo.png" alt="angular logo" class="thumb-img">
+                </div>
+                <div data-ng-show="cube == 'projects-4'">
+                    <!-- memory match game combines css, html and js -->
+                    <h3>Memory Match</h3>
+                    <p>
+                        This project showcases CSS design and animation as well as JavaScript logic.
+                    </p>
+                    <img src="images/html5-logo.png" alt="html 5 logo" class="thumb-img">
+                    <img src="images/css-logo.png" alt="css 3 logo" class="thumb-img">
+                    <img src="images/js-logo.png" alt="javascript logo" class="thumb-img">
+                    <img src="images/bootstrap-logo.png" alt="bootstrap logo" class="thumb-img">
+                </div>
+                <div data-ng-show="cube == 'projects-clear'"></div>
+                <div data-ng-show="cube == 'clear-projects'"></div>
+            </div>
             <!--  button for enter animation  -->
             <button class="btn btn-lg enter-button" id="enter" type="button">
                 <span class="btn-span">Access</span>
             </button>
             <!--  button for exit animation   -->
             <button class="btn btn-lg enter-button" id="exit" type="button" style="display: none">
-                <span class="btn-span">Exit</span>
+                <span class="btn-span">Exit<i class="glyphicon glyphicon-log-out"></i></span>
             </button>
         </div>
-        <div class="hidden-xs">
+        <!--    right sliding div  -->
+        <div class="right">
+        </div>
+        <div class="hidden-xs" data-ng-init="cube = 'projects-clear'">
             <!--  radio buttons to navigate around the cube -->
-            <input type="radio" checked id="radio-front" name="select-face"/>
-            <input type="radio" id="radio-left" name="select-face"/>
-            <input type="radio" id="radio-right" name="select-face"/>
-            <input type="radio" id="radio-top" name="select-face"/>
-            <input type="radio" id="radio-bottom" name="select-face"/>
-            <input type="radio" id="radio-back" name="select-face"/>
+
+            <input type="radio" id="radio-front" name="cube-nav" checked data-ng-model="cube" value="projects-clear" class="woosh"><br>
+            <input type="radio" id="radio-left" name="cube-nav" data-ng-model="cube" value="projects-1" class="woosh"><span class="span hidden"> Greeting.</span><br>
+            <input type="radio" id="radio-right" name="cube-nav" data-ng-model="cube" value="projects-2" class="woosh"><br>
+            <input type="radio" id="radio-top" name="cube-nav" data-ng-model="cube" value="projects-3" class="woosh"><br>
+            <input type="radio" id="radio-bottom" name="cube-nav" data-ng-model="cube" value="projects-4" class="woosh"><br>
+            <input type="radio" id="radio-back" name="cube-nav" data-ng-model="cube" value="clear-projects" class="woosh"><br>
             <div class="separator"></div>
             <div class="space3d hidden">
                 <!--  cube -->
                 <div class="_3dbox">
                     <div class="_3dface _3dface--front">
-                        <h1>Web Designer</h1>
+                        <h1>Web Developer</h1>
                         <p class="front-p">Discovered a passion for web design in 2015. </p>
                         <p class="front-p">Completed a coding bootcamp at LearningFuze.</p>
+                        <video autoplay loop poster="images/sides.gif" class="bg-div">
+                            <source src="video/sides.mp4" type="video/webm">
+                            <source src="video/sides.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="_3dface _3dface--top">
-                        <div class="well horizontal-well blog-well"></div>
-                        <div class="well horizontal-well sgt-well"></div>
+                        <a href="https://kinarki.github.io/student-grade-table" target="_blank">
+                            <div class="well large-well sgt-well"></div>
+                        </a>
+                        <video autoplay loop poster="images/sides.gif" class="bg-div">
+                            <source src="video/sides.mp4" type="video/webm">
+                            <source src="video/sides.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="_3dface _3dface--bottom">
-                        <div class="well large-well matching-well"></div>
+                        <a href="https://kinarki.github.io/memory_match" target="_blank">
+                            <div class="well large-well matching-well"></div>
+                        </a>
+                        <video autoplay loop poster="images/sides.gif" class="bg-div">
+                            <source src="video/sides.mp4" type="video/webm">
+                            <source src="video/sides.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="_3dface _3dface--left">
-                        <div class="well vertical-well calculator-well"></div>
-                        <div class="well vertical-well mboutique-well"></div>
+                        <a href="https://kinarki.github.io/calculator-calcboy" target="_blank">
+                            <div class="well vertical-well calculator-well"></div>
+                        </a>
+                        <a href="https://kinarki.github.io/mboutique" target="_blank">
+                            <div class="well vertical-well mboutique-well"></div>
+                        </a>
+                        <video autoplay loop poster="images/sides.gif" class="bg-div">
+                            <source src="video/sides.mp4" type="video/webm">
+                            <source src="video/sides.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="_3dface _3dface--right">
-                        <div class="well horizontal-well tictactoe-well"></div>
-                        <div class="well horizontal-well tweet-well"></div>
+                        <a href="https://kinarki.github.io/tictactoe" target="_blank">
+                            <div class="well large-well tictactoe-well"></div>
+                        </a>
+                        <video autoplay loop poster="images/sides.gif" class="bg-div">
+                            <source src="video/sides.mp4" type="video/webm">
+                            <source src="video/sides.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="_3dface _3dface--back">
                         <div class="contacts">
@@ -77,39 +171,44 @@
                                 </li>
                             </ul>
                         </div>
+                        <video autoplay loop poster="images/sides.gif" class="bg-div">
+                            <source src="video/sides.mp4" type="video/webm">
+                            <source src="video/sides.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>
             <div class="separator"></div>
         </div>
 
-    <div class="visible-xs xs-container">
-        <div class="well main-well">
-            <h1>Web Designer</h1>
-            <p class="front-p">Discovered a passion for web design in 2015. </p>
-            <p class="front-p">Completed a coding bootcamp at LearningFuze.</p>
-        </div>
-        <!-- projects -->
-        <h2 class="projects-title">Projects</h2>
-        <div class="well horizontal-well blog-well"></div>
-        <div class="well horizontal-well sgt-well"></div>
-        <div class="well horizontal-well matching-well"></div>
-        <div class="well horizontal-well tictactoe-well"></div>
-        <div class="well horizontal-well tweet-well"></div>
-        <div class="well vertical-well calculator-well"></div>
-        <div class="well vertical-well mboutique-well"></div>
+        <div class="visible-xs xs-container">
+            <div class="well main-well">
+                <h1>Web Developer</h1>
+                <p class="front-p">Discovered a passion for web design in 2015. </p>
+                <p class="front-p">Completed a coding bootcamp at LearningFuze.</p>
+            </div>
+            <!-- projects -->
+            <h2 class="projects-title">Projects</h2>
+            <div class="well horizontal-well sgt-well"></div>
+            <a href="https://kinarki.github.io/memory_match" target="_blank">
+                <div class="well horizontal-well matching-well"></div>
+            </a>
+            <div class="well horizontal-well tictactoe-well"></div>
+            <div class="well vertical-well calculator-well"></div>
+            <div class="well vertical-well mboutique-well"></div>
 
-        <div class="well clearfix horizontal-well">
-            <h2>Contacts</h2>
-            <ul>
-                <li><i class="fa fa-github"></i><a href="https://github.com/Kinarki" target="_blank"> GitHub</a></li>
-                <li><i class="fa fa-envelope-o"></i><a href="mailto:nickfriend.kinarki@gmail.com"> Email</a></li>
-                <li><i class="fa fa-linkedin-square"></i>
-                    <a href="https://www.linkedin.com/in/nickfriendkinarki" target="_blank"> LinkedIn</a>
-                </li>
-            </ul>
+            <div class="well clearfix">
+                <h2>Contacts</h2>
+                <ul>
+                    <li><i class="fa fa-github"></i><a href="https://github.com/Kinarki" target="_blank"> GitHub</a></li>
+                    <li><i class="fa fa-envelope-o"></i><a href="mailto:nickfriend.kinarki@gmail.com"> Email</a></li>
+                    <li><i class="fa fa-linkedin-square"></i>
+                        <a href="https://www.linkedin.com/in/nickfriendkinarki" target="_blank"> LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-
+        <audio id="audio" src="audio/door.mp3"></audio>
+        <audio id="woosh-sound" src="audio/woosh-sound.mp3"></audio>
     </body>
 </html>
