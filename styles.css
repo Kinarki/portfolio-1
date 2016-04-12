@@ -167,9 +167,11 @@ input[type='radio'] {
     height: 17%;
 }
 /* radio button navigation CSS */
-/*.radio-buttons {*/
-    /*height: 0;*/
-/*}*/
+.radio-nav {
+    float: left;
+    color: white;
+    margin: 0;
+}
 
 .front-p {
     height: 10px;
@@ -467,6 +469,14 @@ and (max-device-width: 375px) {
         left: 2%;
         transition: 1s ease-in-out;
     }
+    input[type='radio'] {
+        position: relative;
+        float: right;
+        margin: 8px;
+        z-index: 1;
+        right: 81%;
+    }
+
 }
 
 /*@media screen and (min-width: 768px) {*/
